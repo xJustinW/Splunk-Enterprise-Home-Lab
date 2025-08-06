@@ -48,3 +48,7 @@ Host
 
 Source Type
 - Data format
+
+
+<h2>Splunk Navigation</h2>
+<h2></h2>
