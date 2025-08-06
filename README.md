@@ -49,6 +49,10 @@ Host
 Source Type
 - Data format
 
+Apps vs. Add-ons
+- Add-ons: 
 
-<h2>Splunk Navigation</h2>
+<h2>Environment Navigation</h2>
+<h2>Methods Data Ingestion</h2>
+<h2>Searching and Reporting</h2>
 <h2></h2>
