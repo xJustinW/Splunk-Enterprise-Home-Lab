@@ -1,4 +1,4 @@
-# Splunk-Home-Lab
+# Splunk-Enterprise-Home-Lab
 This home lab will be a demonstration of my literacy and knkowledge of the Splunk SIEM tool.
 
 Notes (will turn this into a displayable project):
