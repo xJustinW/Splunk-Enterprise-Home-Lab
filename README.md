@@ -1,58 +1,32 @@
 # Splunk-Enterprise-Home-Lab
-This home lab will be a demonstration of my literacy and knkowledge of the Splunk SIEM tool.
+This home lab will be a demonstration of my literacy and knowledge of the Splunk SIEM tool. My main goal is to achieve basic literacy in the SPL to create practical searches and functional dashboards that may be used in a SOC setting.
 
-Notes (will turn this into a displayable project):
+<h2>Making Efficient Searches with Visualizations</h2>
+<p>There are a few ways that visualizations can be created with the SPL. I can create a variety of tables, charts, and maps which will aid in creating dashboards for later use. I can make tables of the most/least common IPs entering into the network. I can make a chart to show which services are most commonly used and specify various attributes like time of access. I can even make a map of sign-ons and utilize geolocation to show where the sign-ons are originating from in the world. In order to do this, there are some commands I will need to process the visualization aspect. Here are some of the visualization commands I will be making use of:</p>
 
-3 Important parts of Splunk:
-- Forwarder
-  - Sender of data
-  - Lives on the machine its collecting log data from
-  - Feeds raw data to the index
-- Indexer
-  - Proccesses incoming data from the forwarder
-  - Stores events
-  - Holds raw data
-- Search Head
-  - Executes your search requests
-  - Where your SPL is inputted
-  - The interface for searching through indexes
+- timechart
+- chart
+- stats
 
-Different Types of Splunk Deployments:
-1. Standalone - Single instance usually just downloaded on a local machine. No need for forwarders since Splunk is installed on the machine itself.
-2. Basic - This is a biasic deployment of Splunk. This is installed on a local machine but the forwarder is installed on a remote machine elsewhere. Any and all data in this instance will come from the remote machine and not the local machine.
-3. Multi-Instanace - Most companies utilize Splunk in this capacity. Each piece of the environment is separated meaning the Search Head, Indexer, and Forwarder are all using their own resources.
+<p>The easiest way to get a visualization of data is to utilize the Reporting function in a field. Clicking on one of the reporting options in a field will automatically adjust to search to include both the visualization command and the field of information.</p>
+<img src="https://i.imgur.com/dQm0hyj.png" height="80%" width="80%" alt="Quick Reporting"/>
 
-Clustering - A component cluster is a group of 3+ of the same component.
-- an SH cluster would require a 1:1 replica of the other SH in the cluster. A deployer is used to manage the SH cluster.
-- A Indexer cluster increases data availability by data replication. Think of this as a "Raid 5" for index storag. If one goes down, the other indexers carries a copy of all data.
-- A forwarder clusuter would consist of a machines that have forwarders on them. This would require a deployment server to manage multiple forwarders.
 
-Data Pipeline
-1. Input - Forwarders have the data (Data = Streams)
-2. Parsing - Processing of data (Data = Events)
-3. License Usage - License meter check
-4. Indexing - Data is written to disk (Data = Compressed)
+<p>Notice how "timechart avg(bytes)" was appended to the end of my search automatically. This is referred to as quick reporting and is an easy option to visualize data that has been ingested into our index.</p>
+<img src="https://i.imgur.com/jaaG07Q.png" height="80%" width="80%" alt="Quick Reporting"/>
 
-Input Phase
-- Files/Directories
-- Network Traffic
-- Log Files
-- HEC
+<p>Now, I am going to create my own search that is suitable for a SOC setting and breakdown the search to show an understanding of what results are being queried for.</p>
 
-Source
-- Path of the data
-- Method to collect data
+<h2>Making Alerts & Dashboards</h2>
 
-Host
-- Who sent the data
+<p>With knowing what I know now about creating visualizations, I will now create a dashbaord.</p>
+<p>Here are some tips in adjusting a visualization to prepare it to be displayed on a dashboard.</p>
 
-Source Type
-- Data format
+- I can adjust the type of chart/table/map I use by selecting this Chart dropdown.
+<img src="https://i.imgur.com/bpgRudO.png" height="80%" width="80%" alt="Quick Reporting"/>
 
-Apps vs. Add-ons
-- Add-ons: 
+- I can adjust the format of the visual to make it easier to read.
+<img src="https://i.imgur.com/bGhDEKL.png" height="80%" width="80%" alt="Quick Reporting"/>
 
-<h2>Environment Navigation</h2>
-<h2>Methods Data Ingestion</h2>
-<h2>Searching and Reporting</h2>
-<h2></h2>
+- I can adjust the Trellis layout of the visual which will allow me to split up a chart if the information that is present is coming from multiple sources like hosts.
+<img src="https://i.imgur.com/cgOHhce.png" height="80%" width="80%" alt="Quick Reporting"/>
