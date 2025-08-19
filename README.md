@@ -46,7 +46,7 @@ index=security signature="Failed password"
 - I can adjust the Trellis layout of the visual which will allow me to split up a chart if the information that is present is coming from multiple sources like hosts.
 <img src="https://i.imgur.com/cgOHhce.png" height="80%" width="80%" alt="Trellis Options"/>
 
-<p>Once I have adjusuted all my visuals, I can save them to a dashboard. I just simply click the "Save As" button and fill out the finishing fields from there. Here is what the dashboard looks like.</p>
+<p>Once I have adjusted all my visuals, I can save them to a dashboard. I just simply click the "Save As" button and fill out the finishing fields from there. Here is what the dashboard looks like. Again, I am using mock information to concoct these visuals.</p>
 <img src="https://i.imgur.com/Bp2yEWN.png" height="80%" width="80%" alt="Splunk Dashboard"/>
 
 In a SOC setting, I would utilize the information at my hands along with collaboration with my team to come up with efficient searches to create a tuned dashboard that will allow me to monitor an organization's network.
