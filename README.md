@@ -20,6 +20,16 @@ This home lab will be a demonstration of my literacy and knowledge of the Splunk
 
 <p>Now, I am going to create my own search that is suitable for a SOC setting and breakdown the search to show an understanding of what results are being queried for.</p>
 
+```
+index=security signature="Failed password"
+| timechart count by user useother=f usenull=f limit=5
+```
+- ```index=security``` - This searches our security index.
+- ```signature="Failed password"``` - This was a signature pulled from a failed login attempt. I used this to search for all events that had signatures for fialed password attempts. Putting this text after the index search will search specifically for that signature.
+- ```timechart count by user``` - This will create a timechart based on count by user.
+- ```useother=f usenull=f limit=5``` -This removed any events that had other or null values for the user and limited our showings for the top 5 offenders for failed password attempts.
+
+
 <h2>Making Alerts & Dashboards</h2>
 
 <p>With the knowledge I've learned about creating visualizations, I will now create a dashbaord.</p>
@@ -34,7 +44,7 @@ This home lab will be a demonstration of my literacy and knowledge of the Splunk
 - I can adjust the Trellis layout of the visual which will allow me to split up a chart if the information that is present is coming from multiple sources like hosts.
 <img src="https://i.imgur.com/cgOHhce.png" height="80%" width="80%" alt="Quick Reporting"/>
 
-<h3>Here are the searches I utlize for my dashboard!</h3>
+<h3>Here are the searches I utilize for my dashboard!</h3>
 <p></p>
 <h3>Here is the dashboard!</h3>
 <p></p>
