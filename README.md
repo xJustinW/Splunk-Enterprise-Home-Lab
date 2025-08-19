@@ -7,10 +7,13 @@ This home lab will be a demonstration of my literacy and knowledge of the Splunk
 - timechart
 - chart
 - stats
+- iplocation
+- geostats
+- addtotals
+- trendline
 
 <p>The easiest way to get a visualization of data is to utilize the Reporting function in a field. Clicking on one of the reporting options in a field will automatically adjust to search to include both the visualization command and the field of information.</p>
 <img src="https://i.imgur.com/dQm0hyj.png" height="80%" width="80%" alt="Quick Reporting"/>
-
 
 <p>Notice how "timechart avg(bytes)" was appended to the end of my search automatically. This is referred to as quick reporting and is an easy option to visualize data that has been ingested into our index.</p>
 <img src="https://i.imgur.com/jaaG07Q.png" height="80%" width="80%" alt="Quick Reporting"/>
@@ -19,7 +22,7 @@ This home lab will be a demonstration of my literacy and knowledge of the Splunk
 
 <h2>Making Alerts & Dashboards</h2>
 
-<p>With knowing what I know now about creating visualizations, I will now create a dashbaord.</p>
+<p>With the knowledge I've learned about creating visualizations, I will now create a dashbaord.</p>
 <p>Here are some tips in adjusting a visualization to prepare it to be displayed on a dashboard.</p>
 
 - I can adjust the type of chart/table/map I use by selecting this Chart dropdown.
@@ -30,3 +33,8 @@ This home lab will be a demonstration of my literacy and knowledge of the Splunk
 
 - I can adjust the Trellis layout of the visual which will allow me to split up a chart if the information that is present is coming from multiple sources like hosts.
 <img src="https://i.imgur.com/cgOHhce.png" height="80%" width="80%" alt="Quick Reporting"/>
+
+<h3>Here are the searches I utlize for my dashboard!</h3>
+<p></p>
+<h3>Here is the dashboard!</h3>
+<p></p>
